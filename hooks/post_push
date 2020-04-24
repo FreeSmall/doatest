@@ -1,0 +1,12 @@
+#!/bin/sh
+
+uname -a
+
+pwd
+docker run --rm --privileged multiarch/qemu-user-static:register --reset
+ls -lah /usr/bin/qemu-arm-static
+ls -lah /usr/bin/qemu-arm-static-wrangler
+
+docker push freesmall/plex
+
+uname -a
